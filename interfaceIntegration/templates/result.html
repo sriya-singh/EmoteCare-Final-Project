@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Emotion Detection Result</h1>
+    
+    {% if video_filename and predicted_emotion %}
+        <p>Video Filename: {{ video_filename }}</p>
+        <p>Predicted Emotion: {{ predicted_emotion }}</p>
+        <!-- Add more details or styling as needed -->
+    {% else %}
+        <p>Error capturing video and predicting emotion.</p>
+    {% endif %}
+    <p id="video_filename">Video Filename: </p>
+    <p id="predicted_emotion">Predicted Emotion: </p>
+    
+    <!-- Add additional content or styling as needed -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+<script>
+    var socket = io.connect('http://' + document.domain + ':' + location.port + '/test');
+
+    socket.on('update_result', function(data) {
+        document.getElementById('video_filename').innerText = 'Video Filename: ' + data.video_filename;
+        document.getElementById('predicted_emotion').innerText = 'Predicted Emotion: ' + data.predicted_emotion;
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection Reports</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Emotion Detection Reports</h1>
+
+    {% if emotion_data %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Entry ID</th>
+                    <th>Video Filename</th>
+                    <th>Predicted Emotion</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in emotion_data %}
+                    <tr>
+                        <td>{{ entry.id }}</td>
+                        <td>{{ entry.video_filename }}</td>
+                        <td>{{ entry.predicted_emotion }}</td>
+                        <td>{{ entry.timestamp }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No emotion data available.</p>
+    {% endif %}
+
+    <!-- Add additional content or styling as needed -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+    <script>
+        var socket = io.connect('http://' + document.domain + ':' + location.port + '/test');
+
+        socket.on('update_result', function(data) {
+            // Update the reports table dynamically using JavaScript
+            // You can append a new row to the table with the latest prediction data
+        });
+    </script>
+</body>
+</html>

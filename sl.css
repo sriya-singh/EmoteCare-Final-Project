@@ -1,0 +1,228 @@
+/* Global Styles */
+
+/* Nunito */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+header h1{
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+/* Therapist Categories Styles */
+.therapist-categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: #f2f2f2;
+}
+
+.therapist-category {
+    text-align: center;
+    cursor: pointer;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    
+}
+.therapist-category h2{
+    font-size: 1rem;
+}
+.therapist-categories button{
+    border: none;
+    font-size: 40px;
+
+}
+
+.therapist-categories button:hover {
+    background-color: #4CAF50;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Therapist List Styles */
+.therapist-list {
+    padding: 2rem;
+    display: none;
+    background-color: #4CAF50;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+.therapist-item h2{
+    font-size: 50px;
+}
+
+/* Therapist Item Styles */
+.therapist-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+/* Therapist Photo Styles */
+.therapist-photo {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Therapist Info Styles */
+.therapist-info {
+    display: flex; /* Change to flex */
+    font-size: 40px;
+    flex-direction: column; /* Stack info vertically */
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+.therapist-info h3 p {
+    padding: 0%;
+}
+
+/* Schedule Meeting Button Styles */
+.schedule-meeting {
+    background-color: #fefffe;
+    color: black;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: auto; /* Add margin to separate from therapist info */
+}
+
+
+.schedule-meeting:hover {
+    background-color: #3e8e41;
+}
+
+/* Schedule Form Styles */
+.schedule-form {
+    margin-top: 1rem;
+    display: none;
+}
+
+.schedule-form input[type="date"],
+.schedule-form input[type="time"] {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.schedule-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 10px 10px 10px ;
+    font-size: 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.schedule-form button[type="submit"]:hover {
+    background-color: #3e8e41;
+    
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+}
+
+/* Main Styles */
+main {
+    padding: 2rem;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 2rem;
+}
+
+/* Section Title Styles */
+
+
+/* List Styles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* List Item Styles */
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form Label Styles */
+label {
+    margin-bottom: 0.5rem;
+}
+
+/* Input and Textarea Styles */
+input,
+textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Submit Button Styles */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}

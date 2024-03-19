@@ -1,0 +1,90 @@
+/* Nunito */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .quote {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  
+  .section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #86A7FC;
+    color: #fff;
+    border: 2px solid #4a90e2;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 20px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+  }
+  
+  .clicked {
+    background-color: #86A7FC;
+    height: auto;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  .subsections {
+    display: none;
+  }
+  
+  .subsection {
+    width: calc(100% - 40px);
+    border: 1px solid grey;
+    padding: 20px;
+    margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
+    background-color: white;
+    border-radius: 10px;
+    color: #333;
+  }
+  
+  .subsection:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .subsection img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .subsection p {
+    margin-bottom: 10px;
+  }
+  
+  .subsection a {
+    display: inline-block;
+    background-color: #FF9843;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .subsection a:hover {
+    background-color: #FFDD95;
+    transform: scale(1.05);
+    color: black;
+  }

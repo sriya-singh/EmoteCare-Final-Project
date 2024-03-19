@@ -1,6 +1,6 @@
 # EmoteCare
 
-Website: https://s-sweta.github.io/Emote-Care/](https://sriya-singh.github.io/EmoteCare-Final-Project/
+Website: https://sriya-singh.github.io/EmoteCare-Final-Project/
 
 ## Problem Statement
 
